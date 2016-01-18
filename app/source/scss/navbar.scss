@@ -1,0 +1,44 @@
+@import 'mixin';
+.navbar-default {
+  z-index:999;
+  border:transparent;
+  background:black;
+  margin-bottom:-20px;
+  .nav.navbar-nav>li {
+    margin-right:-20px;
+    margin-left:20px;
+    font-weight:100;
+    a {
+      color:$primary-color;
+    }
+    #cart {
+      img {
+      width:100%;
+      max-width:40px;
+      }
+    }
+  }
+}
+.navbar-brand-centered {
+    position: absolute;
+    left: 50%;
+    display: block;
+    width: 160px;
+    text-align: center;
+    background-color: transparent;
+    .logo{
+      position:absolute;
+      max-width:200px;
+      top:0px;
+      left:0;
+      right:0;
+      margin:auto;
+      img {
+        width:100%;
+      }
+    }
+}
+.navbar>.container .navbar-brand-centered,
+.navbar>.container-fluid .navbar-brand-centered {
+    margin-left: -80px;
+}

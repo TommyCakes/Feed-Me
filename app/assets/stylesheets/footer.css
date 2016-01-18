@@ -1,0 +1,9 @@
+.footer {
+  position: relative;
+  margin: 0 auto;
+  height: 10px;
+  background: transparent;
+  bottom: -600px; }
+  .footer li {
+    display: block;
+    height: 20px; }

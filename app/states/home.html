@@ -1,0 +1,43 @@
+<section class="home">
+<!-- <p>test <img ng-src="{{vm.image}}" alt=""></p> -->
+
+  <h1>Feeling Thirsty?</h1>
+
+  <!-- <img src="{{vm.data.attribution.logo}}" alt=""> -->
+  <!-- {{vm.data}} -->
+
+  <input ng-model="vm.user" type="text" id="user" placeholder="Search for new recipes!">
+  <button ng-click="vm.searchForRecipe()"> Submit?</button>
+  <br>
+  <!-- <p><button class='btn btn-info' ng-click='vm.veggie()'>Veggie?</button></p> -->
+  <br>
+
+  <!-- <div ng-repeat="image in vm.image">
+    <a href="{{}}">
+      <img ng-src="{{image}}" alt="">
+    </a>
+  </div> -->
+
+  <div id="matches" ng-repeat="match in vm.data.matches" ng-if="$index % 3 === 0" class="rows">
+    <div class="col-xs-4">
+      <p>{{match.recipeName}}</p>
+      <!-- <a href="{{}}">
+        <img ng-src="{{match.smallImageUrls[0]}}" alt="">
+      </a> -->
+      <a href="{{}}">
+        <img ng-src="{{vm.image}}" alt="">
+      </a>
+        <li>{{match.ingredients}}</li>
+          <p>{{match.rating}}</p>
+    </div>
+  </div>
+
+  <p>{{vm.data.name}} </p>
+  <p>{{vm.data.yield}} </p>
+  <p>{{vm.data.rating}} </p>
+  <li ng-repeat="i in vm.data.ingredientLines">
+    {{i}}
+  </li>
+
+
+</section>

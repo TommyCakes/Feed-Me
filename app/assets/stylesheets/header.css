@@ -1,0 +1,15 @@
+.header {
+  background: white;
+  width: 100%;
+  position: relative;
+  margin-top: 20px;
+  margin-bottom: 40px;
+  height: 10px;
+  z-index: 99; }
+
+.sub-header {
+  background: white;
+  width: 100%;
+  position: relative;
+  margin-top: 0px;
+  z-index: 99; }
