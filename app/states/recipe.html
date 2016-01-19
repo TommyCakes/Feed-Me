@@ -1,23 +1,25 @@
-<h1> Recipes </h1>
+<div class="container">
+  <div class="recipe-info">
+    <div class="recipe-name">
+      <h2>{{rec.recipe.name}}</h2>
+    </div>
 
-<div class="recipe-info">
-  <h2>{{rec.recipe.name}}</h2>
-  <a href="{{rec.recipe.attribution.url}}" target='_blank'>
-    <img ng-src="{{rec.recipe.images[0].hostedLargeUrl}}" alt="">
-  </a>
-  <p>Yield:{{ rec.recipe.yield }}</p><br>
-  <p>Cook Time:{{ rec.recipe.totalTime }}</p>
-  <p>Serves:{{ rec.recipe.numberOfServings }}</p>
-  <hr>
-  <h3>Ingredients</h3>
-  <br>
-
-  <hr>
-
-  <p>{{ rec.recipe.rating}}</p>
-
+    <div class="recipe-img">
+      <a href="{{rec.recipe.source.sourceRecipeUrl}}" target='_blank'>
+        <img ng-src="{{rec.recipe.images[0].hostedLargeUrl}}" alt="">
+      </a>
+    </div>
+    <!-- <p>Yield:{{ rec.recipe.yield }}</p> -->
+    <h3>Cook Time: {{ rec.recipe.totalTime }}</h3>
+    <h3>Serves: {{ rec.recipe.numberOfServings }}</h3>
+    <h3>Prep Time: {{ rec.recipe.prepTime }}</h3>
+    <hr>
+    <h3>Ingredients</h3>
+    <hr>
+    <ul 'list-style-type: none' ng-repeat="ing in rec.ingredients track by $index">
+      <li>{{ ing }}</li>
+      <hr>
+    </ul>
+      <p>We'd give it a <strong>{{ rec.recipe.rating}} / 5!</strong></p>
+  </div>
 </div>
-
-<ul ng-repeat="ing in rec.ingredients track by $index">
-  <li>{{ ing }}</li>
-</ul>

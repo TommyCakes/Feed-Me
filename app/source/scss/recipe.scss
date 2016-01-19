@@ -1,0 +1,27 @@
+.recipe-info {
+  position: relative;
+  margin-top:100px;
+    img {
+    width:100%;
+    max-width:800px;
+    height:100%;
+    max-height:400px;
+    overflow: hidden;
+    }
+    .recipe-name {
+      h2 {
+        position:absolute;
+        z-index: 99;
+        margin:0 auto;
+        top:120px;
+        width:100%;
+        color:white;
+        font-weight: 600;
+        font-size: 3em;
+      }
+    }
+    .recipe-img {
+        height: 220px;
+        opacity: 0.7;
+      }
+}

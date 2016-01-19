@@ -2,7 +2,7 @@
   z-index: 999;
   border: transparent;
   background: black;
-  margin-bottom: -20px;
+  margin-bottom: -130px;
   height: 80px; }
   .navbar-default .nav.navbar-nav > li {
     margin-right: -20px;
@@ -17,8 +17,8 @@
 .navbar-brand-centered {
   position: absolute;
   top: 15px;
-  left: 50%;
-  right: 55%;
+  left: 47%;
+  right: 53%;
   display: block;
   width: 200px;
   margin: 0 auto;

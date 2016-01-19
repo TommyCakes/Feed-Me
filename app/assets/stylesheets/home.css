@@ -1,0 +1,8 @@
+.home {
+  background: trasparent;
+  position: relative;
+  top: 120px; }
+  .home img {
+    width: 100%;
+    height: 300px;
+    overflow: hidden; }

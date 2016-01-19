@@ -1,43 +1,36 @@
-<section class="home">
-<!-- <p>test <img ng-src="{{vm.image}}" alt=""></p> -->
 
-  <h1>Got the munchies?</h1>
+  <section class="home">
+  <!-- <p>test <img ng-src="{{vm.image}}" alt=""></p> -->
 
-  <!-- <img src="{{vm.data.attribution.logo}}" alt=""> -->
-  <!-- {{vm.data}} -->
+    <h1>Choose a food-</h1>
+    <!-- <img src="{{vm.data.attribution.logo}}" alt=""> -->
+    <!-- {{vm.data}} -->
 
-  <input ng-model="vm.user" type="text" id="user" placeholder="Search for new recipes!">
-  <button ng-click="vm.searchForRecipe()"> Submit?</button>
-  <br>
-  <!-- <p><button class='btn btn-info' ng-click='vm.veggie()'>Veggie?</button></p> -->
-  <br>
+    <input ng-model="vm.user" type="text" id="user" placeholder="Search for new recipes!">
+    <button ng-click="vm.searchForRecipe()"> Submit?</button>
+    <br>
+    <!-- <p><button class='btn btn-info' ng-click='vm.veggie()'>Veggie?</button></p> -->
+    <br>
 
-  <!-- <div ng-repeat="image in vm.image">
-    <a href="{{}}">
-      <img ng-src="{{image}}" alt="">
-    </a>
-  </div> -->
 
-  <div id="matches" ng-repeat="match in vm.matches" ng-if="$index % 3 === 0" class="rows">
-    <div class="col-xs-12 col-sm-4">
-      <p>{{match.recipeName}}</p>
-      <!-- <a href="{{}}">
-        <img ng-src="{{match.smallImageUrls[0]}}" alt="">
-      </a> -->
-      <a ui-sref="recipe({recipe_id: match.id})">
-        <img ng-src="{{match.imageUrlsBySize[90] | imageFix}}" alt="">
-      </a>
-        <li>{{match.ingredients}}</li>
-          <p>{{match.rating}}</p>
+    <div id="matches" ng-repeat="match in vm.matches" ng-if="$index % 3 === 0" class="rows">
+      <div class="col-xs-12 col-sm-4">
+        <h3>{{match.recipeName}}<h3p>
+        <!-- <a href="{{}}">
+          <img ng-src="{{match.smallImageUrls[0]}}" alt="">
+        </a> -->
+        <a ui-sref="recipe({recipe_id: match.id})">
+          <img ng-src="{{match.imageUrlsBySize[90] | imageFix}}" alt="">
+        </a>
+      </div>
     </div>
-  </div>
 
-  <p>{{vm.data.name}} </p>
-  <p>{{vm.data.yield}} </p>
-  <p>{{vm.data.rating}} </p>
-  <li ng-repeat="i in vm.data.ingredientLines">
-    {{i}}
-  </li>
+    <p>{{vm.data.name}} </p>
+    <p>{{vm.data.yield}} </p>
+    <p>{{vm.data.rating}} </p>
+    <li ng-repeat="i in vm.data.ingredientLines">
+      {{i}}
+    </li>
 
 
-</section>
+  </section>
