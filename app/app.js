@@ -6,7 +6,8 @@ angular.module('App', ['ui.router'])
   $stateProvider
   .state('home', {
     url: "/",
-    templateUrl: 'app/states/home.html'
+    templateUrl: 'app/states/home.html',
+    controller: 'RecipeCtrl as vm'
   })
   .state('recipe', {
     url: '/recipe/:recipe_id',
@@ -60,10 +61,27 @@ angular.module('App', ['ui.router'])
   }
 })
 
-controller('recipeIdCtrl', function($stateParams) {
+.controller('recipeIdCtrl', function($http, $stateParams) {
    var self = this;
    console.log($stateParams);
 
    // new http request for the specific recipe
    // http://api.yummly.com/v1/api/  $stateParams.recipe_id
+   var recipeUrl = 'http://api.yummly.com/v1/api/recipe/'+ $stateParams.recipe_id +'?_app_id=83b72964&_app_key=695da5d664513cc2530c06da541b64b0';
+  //  console.log('This is the url ' + $stateParams.recipe_id)
+   var request = {
+     callback: 'JSON_CALLBACK',
+     requirePictures: true,
+     //allowedDiet: ["course^course-Beverages"]
+   }
+   $http({
+     method: 'JSONP',
+     url: recipeUrl,
+     params: request
+   })
+   .then(function(response) {
+     console.log(response)
+     self.recipe = response.data;
+     self.ingredients = response.data.ingredientLines;
+   })
  });

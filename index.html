@@ -8,32 +8,22 @@
   <link rel="stylesheet" href="app/assets/stylesheets/styles.css">
   <title>Feed Me!</title>
 </head>
-<body ng-controller="RecipeCtrl as vm">
+<body>
 
   <nav class="navbar navbar-default" role="navigation">
      <div class="container">
 
    <div class="navbar-header">
-     <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar-brand-centered">
-       <span class="sr-only">Toggle navigation</span>
-       <span class="icon-bar"></span>
-       <span class="icon-bar"></span>
-       <span class="icon-bar"></span>
-     </button>
      <div class="navbar-brand navbar-brand-centered">
        <h1 class='logo'>
               <a ui-sref="home">
-                FEED ME!
+                <img src="app/img/feed_me_logo.png" alt="">
               </a>
             </h1>
      </div>
    </div>
 
-   <div class="collapse navbar-collapse" id="navbar-brand-centered">
-     <ul class="nav navbar-nav">
-            <li><a data-toggle="collapse" data-target=".navbar-collapse" ui-sref="home"></a></li>
-     </ul>
-   </div><!-- /.navbar-collapse -->
+
  </div><!-- /.container-fluid -->
 </nav>
 

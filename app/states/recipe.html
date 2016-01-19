@@ -1,3 +1,23 @@
 <h1> Recipes </h1>
 
-<p>{{rec.recipe_id}}</p>
+<div class="recipe-info">
+  <h2>{{rec.recipe.name}}</h2>
+  <a href="{{rec.recipe.attribution.url}}" target='_blank'>
+    <img ng-src="{{rec.recipe.images[0].hostedLargeUrl}}" alt="">
+  </a>
+  <p>Yield:{{ rec.recipe.yield }}</p><br>
+  <p>Cook Time:{{ rec.recipe.totalTime }}</p>
+  <p>Serves:{{ rec.recipe.numberOfServings }}</p>
+  <hr>
+  <h3>Ingredients</h3>
+  <br>
+
+  <hr>
+
+  <p>{{ rec.recipe.rating}}</p>
+
+</div>
+
+<ul ng-repeat="ing in rec.ingredients track by $index">
+  <li>{{ ing }}</li>
+</ul>
