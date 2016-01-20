@@ -1,39 +1,32 @@
 
   <section class="home">
-    <h1>Search for <strong>your</strong> favorite foods!</h1>
+    <div class="search">
+      <!-- ng-hide="vm.clicked === true" -->
+      <h1>Search for <strong>your</strong> favorite foods!</h1>
 
 
-    <input ng-model="vm.user" type="text" id="user" placeholder="Search for new recipes!">
-    <button ng-click="vm.searchForRecipe()"> Submit?</button>
-    <br>
-    <br>
-    <p>
-      <button class='btn btn-info' ng-click='vm.isVeggie()'>
-        <i class="fa fa-heart"></i>
-        Veggie?
-      </button>
-    </p>
+      <input ng-model="vm.user" type="text" id="user" placeholder="Search for new recipes!">
+      <button ng-click="vm.searchForRecipe()"> Submit?</button>
+      <br>
+      <br>
+      <p>
+        <button class='btn btn-info' ng-click='vm.isVeggie()'>
+          <i class="fa fa-heart"></i>
+          Veggie?
+        </button>
+      </p>
+    </div>
     <br>
 
 
     <div id="matches" ng-repeat="match in vm.matches" ng-if="$index % 3 === 0" div class="rows">
       <div class="col-xs-12 col-sm-4">
-        <h3>{{match.recipeName}}<h3p>
-        <!-- <a href="{{}}">
-          <img ng-src="{{match.smallImageUrls[0]}}" alt="">
-        </a> -->
+        <h3>{{match.recipeName}}<h3>
         <a ui-sref="recipe({recipe_id: match.id})">
           <img ng-src="{{match.imageUrlsBySize[90] | imageFix}}" alt="">
         </a>
       </div>
     </div>
-
-    <p>{{vm.data.name}} </p>
-    <p>{{vm.data.yield}} </p>
-    <p>{{vm.data.rating}} </p>
-    <li ng-repeat="i in vm.data.ingredientLines">
-      {{i}}
-    </li>
 
     <!-- <img id="yummly" src="{{vm.data.attribution.logo}}" alt=""> -->
     <!-- <p>{{vm.data.attribution.text}}</p> -->

@@ -28,8 +28,10 @@ angular.module('App', ['ui.router'])
 .controller('RecipeCtrl', function($http, $stateParams) {
   var self = this;
   self.user = '';
-
+  self.clicked = false
   self.veggie = false;
+
+  // Veggie select function
   this.isVeggie = function() {
     console.log("You're a veggie!")
     self.veggie = true;
@@ -60,6 +62,7 @@ angular.module('App', ['ui.router'])
       console.log(data)
       self.data = data.data
       self.matches = self.data.matches;
+      self.clicked = true
     });
   }
 })

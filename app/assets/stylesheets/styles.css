@@ -58,7 +58,6 @@ body {
 
 .home {
   color: white;
-  background: trasparent;
   position: relative;
   top: 350px;
   margin: 0 auto; }
@@ -81,7 +80,9 @@ body {
   .home h3, .home p {
     padding: 0;
     margin: 0; }
-  .home img {
+  .home #matches h3 {
+    background: rgba(0, 0, 0, 0.6); }
+  .home #matches img {
     width: 100%;
     padding: 10px;
     height: 300px;
