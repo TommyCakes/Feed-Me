@@ -5,7 +5,8 @@
     width: 100%; }
   .recipe-info .container {
     position: absolute;
-    top: 120px; }
+    top: 120px;
+    width: 100%; }
     .recipe-info .container .recipe-name {
       width: 100%;
       z-index: 1009; }
@@ -26,5 +27,8 @@
         border-radius: 50%;
         position: relative;
         overflow: hidden; }
+    .recipe-info .container .recipe {
+      background: rgba(0, 0, 0, 0.4);
+      color: white; }
   .recipe-info p {
     background: white; }

@@ -16,6 +16,8 @@ angular.module('App', ['ui.router'])
   })
 })
 
+// replaces img url's ('=s90-c') with whitespace
+// to allow for bigger images;
 .filter('imageFix', function() {
   return function(text) {
     var img = text.replace(/=s90-c/, '');
@@ -27,11 +29,21 @@ angular.module('App', ['ui.router'])
   var self = this;
   self.user = '';
 
+  self.veggie = false;
+  this.isVeggie = function() {
+    console.log("You're a veggie!")
+    self.veggie = true;
+  }
   var appId = '83b72964';
   var appKey = '695da5d664513cc2530c06da541b64b0';
 
   this.searchForRecipe = function() {
+    if (self.veggie === true) {
+      var url = 'http://api.yummly.com/v1/api/recipes?_app_id=83b72964&_app_key=695da5d664513cc2530c06da541b64b0&course&allowedDiet[]=387^Lacto-ovo%20vegetarian'
+    }
+    else {
     var url = 'http://api.yummly.com/v1/api/recipes?_app_id=83b72964&_app_key=695da5d664513cc2530c06da541b64b0';
+    }
     var request = {
       callback: 'JSON_CALLBACK',
       maxResult: 60,
@@ -48,15 +60,6 @@ angular.module('App', ['ui.router'])
       console.log(data)
       self.data = data.data
       self.matches = self.data.matches;
-      // self.image = self.match[0].smallImageUrls[0];
-
-      // for (var i = 0; i < 60; i++) {
-      //   self.image = self.data.matches[i].imageUrlsBySize[90].replace("=s90-c", "");
-      //   console.log(self.image);
-      // }
-      // angular.forEach(self.image, function(value, key) {
-      //   self.image = self.match[value].smallImageUrls[0].replace("=s90", "");
-      // })
     });
   }
 })

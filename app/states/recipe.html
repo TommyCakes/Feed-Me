@@ -5,7 +5,7 @@
       <img src="app/img/Knifes.png" alt="">
     <div class="container">
     <div class="recipe-name">
-      <h2>{{rec.recipe.name}}</h2>
+      <h2>{{rec.recipe.name}}!</h2>
     </div>
 
     <div class="recipe-img">
@@ -14,16 +14,19 @@
       </a>
     </div>
     <!-- <p>Yield:{{ rec.recipe.yield }}</p> -->
-    <h3>Cook Time: {{ rec.recipe.totalTime }}</h3>
-    <h3>Serves: {{ rec.recipe.numberOfServings }}</h3>
-    <h3>Prep Time: {{ rec.recipe.prepTime }}</h3>
-    <hr>
-    <h3>Ingredients</h3>
-    <hr>
-    <ul 'list-style-type: none' ng-repeat="ing in rec.ingredients track by $index">
-      <li>{{ ing }}</li>
+    <div class="recipe">
+      <h3>Cook Time: {{ rec.recipe.totalTime }}</h3>
       <hr>
-    </ul>
+      <h3>Serves: {{ rec.recipe.numberOfServings }} People</h3>
+      <hr>
+      <h3>Prep Time: {{ rec.recipe.prepTime }}</h3>
+      <hr>
+      <h3>Ingredients</h3>
+      <hr>
+      <ul 'list-style-type: none' ng-repeat="ing in rec.ingredients track by $index">
+        <li>{{ ing }}</li>
+      </ul>
+    </div>
       <p>We'd give it a <strong>{{ rec.recipe.rating}} / 5!</strong></p>
   </div>
 </div>

@@ -62,8 +62,20 @@ body {
   position: relative;
   top: 350px;
   margin: 0 auto; }
-  .home #yummly img {
-    width: 10px; }
+  .home input, .home button {
+    color: black; }
+  .home .btn {
+    background: #7ac777;
+    border: none;
+    height: 50px;
+    width: 50%;
+    color: white;
+    font-size: 2em;
+    -webkit-transition: opacity 5s, background 1s; }
+    .home .btn:hover {
+      opacity: 0.9;
+      background: #4db149;
+      border: none; }
   .home .row {
     display: flex; }
   .home h3, .home p {
@@ -100,7 +112,8 @@ body {
     width: 100%; }
   .recipe-info .container {
     position: absolute;
-    top: 120px; }
+    top: 120px;
+    width: 100%; }
     .recipe-info .container .recipe-name {
       width: 100%;
       z-index: 1009; }
@@ -121,6 +134,9 @@ body {
         border-radius: 50%;
         position: relative;
         overflow: hidden; }
+    .recipe-info .container .recipe {
+      background: rgba(0, 0, 0, 0.4);
+      color: white; }
   .recipe-info p {
     background: white; }
 

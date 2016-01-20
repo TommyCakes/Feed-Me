@@ -1,3 +1,5 @@
+@import 'mixin';
+
 .recipe-info {
   position: relative;
   margin-top:200px;
@@ -7,6 +9,7 @@
   .container {
     position:absolute;
     top:120px;
+    width:100%;
     .recipe-name {
       width:100%;
       // position:absolute;
@@ -34,6 +37,10 @@
         // max-height:400px;
         overflow: hidden;
         }
+      }
+      .recipe {
+        background:$white-trans;
+        color:white;
       }
    }
    p {
