@@ -1,12 +1,50 @@
 
 .home {
+  color:white;
   background:trasparent;
   position: relative;
-  top:120px;
+  top:350px;
+  margin:0 auto;
+  #yummly {
+    img {
+      width:10px;
+    }
+  }
+  .row {
+  display: flex;
+  }
+  h3, p {
+    padding:0;
+    margin:0;
+  }
   img {
     width:100%;
+    padding:10px;
     // max-width: 500px;
     height:300px;
+    top:10px;
+    position: relative;
     overflow:hidden;
+  }
+}
+
+@media screen and (min-width: 580px) {
+  .home {
+    top:340px;
+  }
+}
+@media screen and (min-width: 680px) {
+  .home {
+    top:360px;
+  }
+}
+@media screen and (min-width: 800px) {
+  .home {
+    top:390px;
+  }
+}
+@media screen and (min-width: 880px) {
+  .home {
+    top:450px;
   }
 }

@@ -1,19 +1,16 @@
 
   <section class="home">
-  <!-- <p>test <img ng-src="{{vm.image}}" alt=""></p> -->
+    <h1>Search for <strong>your</strong> favorite foods!</h1>
 
-    <h1>Choose a food-</h1>
-    <!-- <img src="{{vm.data.attribution.logo}}" alt=""> -->
-    <!-- {{vm.data}} -->
 
     <input ng-model="vm.user" type="text" id="user" placeholder="Search for new recipes!">
     <button ng-click="vm.searchForRecipe()"> Submit?</button>
     <br>
-    <!-- <p><button class='btn btn-info' ng-click='vm.veggie()'>Veggie?</button></p> -->
+    <p><button class='btn btn-info' ng-click='vm.veggie()'>Feeling Veggie?</button></p>
     <br>
 
 
-    <div id="matches" ng-repeat="match in vm.matches" ng-if="$index % 3 === 0" class="rows">
+    <div id="matches" ng-repeat="match in vm.matches" ng-if="$index % 3 === 0" div class="rows">
       <div class="col-xs-12 col-sm-4">
         <h3>{{match.recipeName}}<h3p>
         <!-- <a href="{{}}">
@@ -32,5 +29,6 @@
       {{i}}
     </li>
 
-
+    <!-- <img id="yummly" src="{{vm.data.attribution.logo}}" alt=""> -->
+    <!-- <p>{{vm.data.attribution.text}}</p> -->
   </section>

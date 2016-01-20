@@ -3,18 +3,18 @@
 @import url("https://fonts.googleapis.com/css?family=Open+Sans");
 @import url(https://fonts.googleapis.com/css?family=Source+Sans+Pro:400,200,300,600,700|Roboto:400,100,300);
 
-// html {
-//   background: url('/app/img/kitchen.jpg')no-repeat center center fixed;
-//   // background-size: 100%;
-//   background-size: cover;
-// }
-  // @media screen and (min-width: 480px) {
-  //   background: black;
-  //   background-size: 100%;
-  // }
+html {
+  background: url('/app/img/kitchen.png')no-repeat center 0px fixed;
+  background-size: cover;
+}
+@media screen and (max-width: 560px) {
+  html {
+    background: url('/app/img/kitchen.png')no-repeat center 0px fixed;
+    background-size: 100vh;
+  }
+}
 body {
   // background: mintcream;
-
   text-align:center;
   color:black;
   font-family: 'Roboto', sans-serif;
